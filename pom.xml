@@ -4,8 +4,8 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>gov.va.eventbus.decisionletter.dedupe</groupId>
-  <artifactId>deduplicator</artifactId>
+  <groupId>gov.va.eventbus.test</groupId>
+  <artifactId>testapp</artifactId>
   <version>1.0-SNAPSHOT</version>
   <parent>
     <groupId>ves-event-bus-apps</groupId>
@@ -35,11 +35,6 @@
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>gov.va.eventbus</groupId>
-      <artifactId>va-schemas</artifactId>
     </dependency>
 
     <dependency>
