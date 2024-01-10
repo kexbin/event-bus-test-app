@@ -14,7 +14,17 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+      - uses: s4u/maven-settings-action@v3.0.0
+        with:
+          # add another server to the ~/.m2/settings.xml default config.
+          # We use a "Bearer" token for authorization to get packages from other repositories.
+          servers: '[
+          {"id": "github-event-bus-repos","configuration": {"httpHeaders": {"property": {"name": "Authorization","value": "Bearer ${{ secrets.PCKGS_PAT }}"}}}}]'
       - name: Unit Test
         run: mvn test
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # download of parent POM fails with repository
+        #  <id>github</id>
+        #  <url>https://maven.pkg.github.com/kexbin/event-bus-test-app</url>
+        # and GITHUB_TOKEN
+        # env:
+        #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

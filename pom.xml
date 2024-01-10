@@ -19,7 +19,7 @@
     Set a "Bearer" Personal Access Token in settings.xml to give authorization.
     -->
     <repository>
-      <id>github</id>
+      <id>github-event-bus-repos</id>
       <url>https://maven.pkg.github.com/kexbin/event-bus-test-app</url>
       <snapshots>
         <enabled>true</enabled>
